@@ -13,26 +13,26 @@ class Google extends AbstractProvider
     use BearerAuthorizationTrait;
 
     /**
-     * @var string If set, this will be sent to google as the "access_type" parameter.
-     * @link https://developers.google.com/identity/protocols/OpenIDConnect#authenticationuriparameters
+     * @var string If set, this will be sent to Aw as the "access_type" parameter.
+     * @link https://awuniversity...
      */
     protected $accessType;
 
     /**
-     * @var string If set, this will be sent to google as the "hd" parameter.
-     * @link https://developers.google.com/identity/protocols/OpenIDConnect#authenticationuriparameters
+     * @var string If set, this will be sent to Aw as the "hd" parameter.
+     * @link https://awuniversity...
      */
     protected $hostedDomain;
 
     /**
-     * @var string If set, this will be sent to google as the "prompt" parameter.
-     * @link https://developers.google.com/identity/protocols/OpenIDConnect#authenticationuriparameters
+     * @var string If set, this will be sent to Aw as the "prompt" parameter.
+     * @link https://awuniversity...
      */
     protected $prompt;
 
     /**
      * @var array List of scopes that will be used for authentication.
-     * @link https://developers.google.com/identity/protocols/googlescopes
+     * @link https://awuniversity...
      */
     protected $scopes = [];
 

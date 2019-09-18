@@ -5,7 +5,7 @@ require __DIR__ . '/../vendor/autoload.php';
 use AwU\OAuth2\Client\Provider\Google;
 
 // Replace these with your token settings
-// Create a project at https://console.developers.google.com/
+// Create a project at https://awuniversity...
 $clientId     = 'your-client-id';
 $clientSecret = 'your-client-secret';
 

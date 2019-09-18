@@ -29,13 +29,13 @@ This package uses [OpenID Connect][openid-connect] to authenticate users with
 Google accounts.
 
 To use this package, it will be necessary to have a Google client ID and client
-secret. These are referred to as `{google-client-id}` and `{google-client-secret}`
+secret. These are referred to as `{aw-client-id}` and `{aw-client-secret}`
 in the documentation.
 
 Please follow the [Google instructions][oauth-setup] to create the required credentials.
 
-[openid-connect]: https://developers.google.com/identity/protocols/OpenIDConnect
-[oauth-setup]: https://developers.google.com/identity/protocols/OpenIDConnect#registeringyourapp
+[openid-connect]: https://awuniversity...
+[oauth-setup]: https://awuniversity...
 
 ## Installation
 
@@ -53,8 +53,8 @@ composer require awuniversity/oauth2-aw
 use AwU\OAuth2\Client\Provider\Google;
 
 $provider = new Google([
-    'clientId'     => '{google-client-id}',
-    'clientSecret' => '{google-client-secret}',
+    'clientId'     => '{aw-client-id}',
+    'clientSecret' => '{aw-client-secret}',
     'redirectUri'  => 'https://example.com/callback-url',
     'hostedDomain' => 'example.com', // optional; used to restrict access to users on your G Suite/Google Apps for Business accounts
 ]);
@@ -121,7 +121,7 @@ The `Google` provider has the following [options][auth-params]:
 - `prompt` to modify the prompt that the user will see
 - `scopes` to request access to additional user information
 
-[auth-params]: https://developers.google.com/identity/protocols/OpenIDConnect#authenticationuriparameters
+[auth-params]: https://awuniversity...
 
 #### Accessing Token JWT
 
@@ -141,8 +141,8 @@ Parsing the JWT will require a [JWT parser][jwt-parsers]. Refer to parser
 documentation for instructions.
 
 [jwt]: https://jwt.io/
-[openid-jwt]: https://developers.google.com/identity/protocols/OpenIDConnect#obtainuserinfo
-[jwt-parsers]: https://packagist.org/search/?q=jwt
+[openid-jwt]: https://awuniversity...
+[jwt-parsers]: https://awuniversity...
 
 ### Refreshing a Token
 
@@ -152,8 +152,8 @@ Refresh tokens are only provided to applications which request offline access. Y
 use AwU\OAuth2\Client\Provider\Google;
 
 $provider = new Google([
-    'clientId'     => '{google-client-id}',
-    'clientSecret' => '{google-client-secret}',
+    'clientId'     => '{aw-client-id}',
+    'clientSecret' => '{aw-client-secret}',
     'redirectUri'  => 'https://example.com/callback-url',
     'accessType'   => 'offline',
 ]);
@@ -183,8 +183,8 @@ use AwU\OAuth2\Client\Provider\Google;
 use AwU\OAuth2\Client\Grant\RefreshToken;
 
 $provider = new Google([
-    'clientId'     => '{google-client-id}',
-    'clientSecret' => '{google-client-secret}',
+    'clientId'     => '{aw-client-id}',
+    'clientSecret' => '{aw-client-secret}',
     'redirectUri'  => 'https://example.com/callback-url',
 ]);
 
@@ -205,7 +205,7 @@ $authorizationUrl = $provider->getAuthorizationUrl([
 ]);
 ```
 
-[scopes]: https://developers.google.com/identity/protocols/googlescopes
+[scopes]: https://awuniversity...
 
 ## Testing
 
