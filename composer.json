@@ -1,12 +1,12 @@
 {
     "name": "awuniversity/oauth2-aw",
-    "description": "OAuth 2.0 Client Google",
+    "description": "OAuth 2.0 Client AW",
     "license": "MIT",
     "keywords": [
     ],
     "authors": [
         {
-            "name": "JZ"
+            "name": "Jurek"
         }
     ],
     "minimum-stability": "stable",
