@@ -2,7 +2,7 @@
 
 namespace AwU\OAuth2\Client\Provider;
 
-class GoogleUser implements ResourceOwnerInterface
+class AwUser implements ResourceOwnerInterface
 {
     /**
      * @var array

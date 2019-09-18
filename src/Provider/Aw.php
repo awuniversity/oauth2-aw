@@ -8,7 +8,7 @@ use AwU\OAuth2\Client\Token\AccessToken;
 use AwU\OAuth2\Client\Tool\BearerAuthorizationTrait;
 use Psr\Http\Message\ResponseInterface;
 
-class Google extends AbstractProvider
+class Aw extends AbstractProvider
 {
     use BearerAuthorizationTrait;
 
@@ -120,7 +120,7 @@ class Google extends AbstractProvider
 
     protected function createResourceOwner(array $response, AccessToken $token)
     {
-        $user = new GoogleUser($response);
+        $user = new AwUser($response);
 
         $this->assertMatchingDomain($user->getHostedDomain());
 
