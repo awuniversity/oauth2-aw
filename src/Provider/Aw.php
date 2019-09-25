@@ -90,7 +90,8 @@ class Aw extends AbstractProvider
             'openid',
             'roles',
             'profile',
-            'email'
+            'email',
+            'employeeinfo'
         ];
     }
 
