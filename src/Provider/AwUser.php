@@ -115,6 +115,19 @@ class AwUser implements ResourceOwnerInterface
     }
 
     /**
+     * Get employee_number
+     *
+     * @return string|null
+     */
+    public function getEmployeeNumber()
+    {
+        if (array_key_exists('employee_number', $this->response)) {
+            return $this->response['employee_number'];
+        }
+        return null;
+    }
+
+    /**
      * Get user data as an array.
      *
      * @return array
