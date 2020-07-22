@@ -9,9 +9,6 @@ class AwUser implements ResourceOwnerInterface
      */
     protected $response;
 
-    /**
-     * @param array $response
-     */
     public function __construct(array $response)
     {
         $this->response = $response;
@@ -19,54 +16,43 @@ class AwUser implements ResourceOwnerInterface
 
     public function getId()
     {
+        throw new \Exception('Wyłączone użycie getId()');
+        //return $this->response['sub'];
+    }
+
+    public function getSub()
+    {
         return $this->response['sub'];
     }
 
-    /**
-     * Get preferred display name.
-     *
-     * @return string
-     */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists('user_principal_name', $this->response)) {
+            return $this->response['user_principal_name'];
+        }
+        return null;
+    }
+
     public function getName()
     {
         return $this->response['name'];
     }
 
-    /**
-     * Get preferred first name.
-     *
-     * @return string
-     */
     public function getGivenName()
     {
         return $this->response['given_name'];
     }
 
-    /**
-     * Get preferred last name.
-     *
-     * @return string
-     */
     public function getFamilyName()
     {
         return $this->response['family_name'];
     }
 
-    /**
-     * Get preferred roles.
-     *
-     * @return array
-     */
     public function getRoles()
     {
         return $this->response['role'];
     }
 
-    /**
-     * Get locale.
-     *
-     * @return string|null
-     */
     public function getLocale()
     {
         if (array_key_exists('locale', $this->response)) {
@@ -75,11 +61,6 @@ class AwUser implements ResourceOwnerInterface
         return null;
     }
 
-    /**
-     * Get email address.
-     *
-     * @return string|null
-     */
     public function getEmail()
     {
         if (array_key_exists('email', $this->response)) {
@@ -88,11 +69,6 @@ class AwUser implements ResourceOwnerInterface
         return null;
     }
 
-    /**
-     * Get hosted domain.
-     *
-     * @return string|null
-     */
     public function getHostedDomain()
     {
         if (array_key_exists('hd', $this->response)) {
@@ -101,11 +77,6 @@ class AwUser implements ResourceOwnerInterface
         return null;
     }
 
-    /**
-     * Get avatar image URL.
-     *
-     * @return string|null
-     */
     public function getAvatar()
     {
         if (array_key_exists('picture', $this->response)) {
@@ -114,11 +85,6 @@ class AwUser implements ResourceOwnerInterface
         return null;
     }
 
-    /**
-     * Get employee_number
-     *
-     * @return string|null
-     */
     public function getEmployeeNumber()
     {
         if (array_key_exists('employee_number', $this->response)) {
@@ -127,11 +93,6 @@ class AwUser implements ResourceOwnerInterface
         return null;
     }
 
-    /**
-     * Get user data as an array.
-     *
-     * @return array
-     */
     public function toArray()
     {
         return $this->response;
