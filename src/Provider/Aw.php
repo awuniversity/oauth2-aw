@@ -90,6 +90,7 @@ class Aw extends AbstractProvider
             'openid',
             'roles',
             'profile',
+            'serviceonline', // zakomentować dla aplikacji innych nich SERVICE online
             'email',
             'employeeinfo'
         ];
