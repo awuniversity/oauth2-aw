@@ -93,6 +93,17 @@ class AwUser implements ResourceOwnerInterface
         return null;
     }
 
+    /**
+     * Tylko dla aplikacji "SERVICE online"
+     */
+    public function getDistinguishedName()
+    {
+        if (array_key_exists('distinguished_name', $this->response)) {
+            return $this->response['distinguished_name'];
+        }
+        return null;
+    }
+
     public function toArray()
     {
         return $this->response;
