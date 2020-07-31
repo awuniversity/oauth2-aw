@@ -50,7 +50,7 @@ class AwUser implements ResourceOwnerInterface
 
     public function getRoles()
     {
-        return $this->response['role'];
+        return $this->response['role'] ?? [];
     }
 
     public function getLocale()
